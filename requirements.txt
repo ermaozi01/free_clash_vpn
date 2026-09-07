@@ -1,5 +1,5 @@
-requests==2.20.0
-feedparser==6.0.2
-matplotlib
-pandas
-
+requests==2.34.2
+feedparser==6.0.14
+matplotlib==3.10.9
+pandas==2.3.3
+PyYAML==6.0.3
