@@ -33,21 +33,3 @@
 ## ⭐ 感谢支持
 
 [![操，图挂了……](https://cdn.jsdelivr.net/gh/ermaozi01/free_clash_vpn/mail/project_info.svg)](https://ermao.net)
-
-## 本地检查与维护
-
-使用 Python 3.12：
-
-```sh
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python main.py
-```
-
-采集源仍为长风分享 RSS。只有两种订阅均下载并通过格式检查后才更新文件；
-请求失败或内容无效会返回非零退出码，不覆盖旧订阅。格式检查不代表节点连通或可用。
-
-GitHub Actions 每 12 小时运行一次，使用内置 `GITHUB_TOKEN` 提交文件和读取项目公开信息，
-无需额外配置 `TOKEN`。三个写入工作流共用并发组，避免同时改写分支；
-原有每周清理提交历史行为保持不变。GitHub 并发组只保留一个等待中的任务，
-高频手动触发可能替换尚未开始的运行。
