@@ -34,39 +34,16 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+  - name: 🇯🇵_JP_日本
     type: vmess
-    server: v6.hdacd.com
-    port: 30806
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
+    server: 38.47.121.14
+    port: 49432
+    uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+    alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸_US_美国
-    type: vmess
-    server: www.shopify.com
-    port: 443
-    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: guanwang.awsno.com
-    network: ws
-    ws-opts:
-      path: /hls/cctv5phd.m3u8
-      headers:
-        Host: guanwang.awsno.com
-    udp: true
-  - name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
-    type: hysteria2
-    server: 31.76.71.252
-    port: 443
-    password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-    sni: gta.internet-card.sbs
-    skip-cert-verify: true
+    network: http
     udp: true
   - name: 🇩🇪_DE_德国
     type: vless
@@ -85,94 +62,17 @@ proxies:
     type: vless
     server: jp.sofast.live
     port: 52683
-    uuid: 399b6b23-cc40-4831-a494-61948e2df133
+    uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇩🇪_DE_德国_1
-    type: hysteria2
-    server: dg2.mangshe.xyz
-    port: 2056
-    password: 41f0d6d3-4a45-4635-8225-2abd2284189b
-    sni: dg2.mangshe.xyz
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本
     type: vless
-    server: us22.sofast.live
-    port: 58011
-    uuid: 0afc6426-606c-48e7-bd70-3c424a416842
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇯🇵_JP_日本
-    type: vmess
-    server: 38.47.121.14
-    port: 49432
-    uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
-    alterId: 0
-    cipher: none
-    tls: false
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /
-    udp: true
-  - name: 🇷🇺_RU_俄罗斯
-    type: hysteria2
-    server: gta.internet-card.sbs
+    server: cf-socks.caoyuwu.eu.org
     port: 443
-    password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-    sni: gta.internet-card.sbs
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-    type: vmess
-    server: v33.hdacd.com
-    port: 30833
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
-    type: vmess
-    server: v4.hdacd.com
-    port: 30804
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: none
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-    type: hysteria2
-    server: mszz.mangshe.xyz
-    port: 20562
-    password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-    sni: www.microsoft.com
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港
-    type: vmess
-    server: v10.hdacd.com
-    port: 30807
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-    type: vmess
-    server: v36.hdacd.com
-    port: 30836
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
+    uuid: 9cdcbaf0-d244-4f37-b227-90166e43f5b5
+    network: ws
+    tls: true
     skip-cert-verify: true
     udp: true
 proxy-groups:
@@ -182,38 +82,18 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -224,80 +104,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -326,20 +166,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇯🇵_JP_日本
       - 🇩🇪_DE_德国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇯🇵_JP_日本
-      - 🇷🇺_RU_俄罗斯
-      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-      - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-      - 🇭🇰_HK_中国香港
-      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
 rule-providers:
   LocalAreaNetwork:
     type: http
