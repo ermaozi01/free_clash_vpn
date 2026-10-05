@@ -1,0 +1,545 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+    type: vmess
+    server: v4.hdacd.com
+    port: 30804
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+    type: vmess
+    server: v33.hdacd.com
+    port: 30833
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_CN_中国
+    type: vmess
+    server: 112.132.215.108
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵_JP_日本
+    type: trojan
+    server: prime-corgi.rooster465.autos
+    port: 443
+    password: UX82473651
+    sni: prime-corgi.rooster465.autos
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港
+    type: vmess
+    server: v10.hdacd.com
+    port: 30807
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vless
+    server: iiproxy888.iiproxy.com
+    port: 8443
+    uuid: 806fa224-44f7-4c1b-b7a3-05bfdfdfbf87
+    network: ws
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+    type: vmess
+    server: v35.hdacd.com
+    port: 30835
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vless
+    server: us22.sofast.live
+    port: 58011
+    uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+    type: vmess
+    server: v6.hdacd.com
+    port: 30806
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+    type: vmess
+    server: v36.hdacd.com
+    port: 30836
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇰🇷_KR_韩国
+    type: trojan
+    server: ikr100b.zxom.eu.org
+    port: 20007
+    password: 178c178666bb4ae5
+    sni: ikr100b.zxom.eu.org
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_CN_中国_1
+    type: vmess
+    server: 39.108.113.127
+    port: 10086
+    uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯
+    type: vless
+    server: fbsv6.guardora.pro
+    port: 443
+    uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+    network: ws
+    servername: fbsv6.guardora.pro
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws
+      headers:
+        Host: fbsv6.guardora.pro
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国
+    type: vmess
+    server: guanwang.awsno.com
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: guanwang.awsno.com
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+    udp: true
+  - name: 🇺🇸_US_美国->🇵🇱_PL_波兰
+    type: vless
+    server: iiproxy8.iiproxy.com
+    port: 8443
+    uuid: 806fa224-44f7-4c1b-b7a3-05bfdfdfbf87
+    network: ws
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
+    type: vmess
+    server: v29.hdacd.com
+    port: 30829
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇪_IE_爱尔兰
+    type: trojan
+    server: sacred-anemone.rooster465.autos
+    port: 443
+    password: UX82473651
+    sni: sacred-anemone.rooster465.autos
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: vless
+    server: jp.sofast.live
+    port: 52683
+    uuid: 399b6b23-cc40-4831-a494-61948e2df133
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬_SG_新加坡
+    type: trojan
+    server: inviting-ferret.rooster465.autos
+    port: 443
+    password: UX82473651
+    sni: inviting-ferret.rooster465.autos
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 86153507-1976-48f1-ac86-e8ab274470a8.fly.dev
+    port: 443
+    uuid: 0b3c3f4f-843a-5b0a-98fe-132c88fbefc0
+    network: ws
+    servername: 86153507-1976-48f1-ac86-e8ab274470a8.fly.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws/0b3c3f4f-843a-5b0a-98fe-132c88fbefc0
+      headers:
+        Host: 86153507-1976-48f1-ac86-e8ab274470a8.fly.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vless
+    server: ccc.010304.xyz
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    servername: ccc.010304.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+      - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+      - 🇨🇳_CN_中国
+      - 🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
+      - 🇰🇷_KR_韩国
+      - 🇨🇳_CN_中国_1
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇮🇪_IE_爱尔兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyList.list
+    path: ./rules/BanEasyList.yaml
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list
+    path: ./rules/BanEasyListChina.yaml
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyPrivacy.list
+    path: ./rules/BanEasyPrivacy.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,BanEasyList,🆎 AdBlock
+  - RULE-SET,BanEasyListChina,🆎 AdBlock
+  - RULE-SET,BanEasyPrivacy,🆎 AdBlock
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
