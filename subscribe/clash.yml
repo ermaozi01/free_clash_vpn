@@ -24,14 +24,19 @@ dns:
       - https://1.1.1.1/dns-query#🚀 节点选择
       - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-  - name: 🇭🇰_HK_中国香港->🇫🇷_FR_法国
-    type: vmess
-    server: v35.hdacd.com
-    port: 30835
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
+  - name: 🇳🇱_NL_荷兰
+    type: vless
+    server: no.gokonstantin.com
+    port: 443
+    uuid: 053682f4-c584-46df-ad81-069dec5f64f0
+    network: ws
+    servername: no.gokonstantin.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cdnws
+      headers:
+        Host: no.gokonstantin.com
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸_US_美国
@@ -50,14 +55,6 @@ proxies:
       headers:
         Host: guanwang.awsno.com
     udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vless
-    server: jp.sofast.live
-    port: 52683
-    uuid: 399b6b23-cc40-4831-a494-61948e2df133
-    tls: false
-    skip-cert-verify: true
-    udp: true
   - name: 🇨🇳_CN_中国
     type: vmess
     server: 112.132.215.108
@@ -68,22 +65,45 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸_US_美国_1
-    type: trojan
-    server: 192.9.158.245
-    port: 20019
-    password: b837a998138d4c0a
-    sni: sa245.moldscience.cc
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本
+    type: vless
+    server: jeffsubs.com
+    port: 443
+    uuid: 3d841cdf-f91e-4f3b-a315-c18edcbd2606
+    network: ws
+    servername: jeffsubs.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /nnuyws
+      headers:
+        Host: jeffsubs.com
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
     type: vmess
-    server: sbgfgov.vip6.wogacnmnagfwgov.com
-    port: 11206
-    uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+    server: v6.hdacd.com
+    port: 30806
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
     alterId: 2
     cipher: auto
     tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_IT_意大利
+    type: ss
+    server: 45.144.172.123
+    port: 10771
+    cipher: aes-256-gcm
+    password: 78235e7dc55e9ad1
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵_JP_日本
+    type: ss
+    server: 212.192.221.129
+    port: 10771
+    cipher: aes-256-gcm
+    password: 9cfaa78d51ac366f
     skip-cert-verify: true
     udp: true
 proxy-groups:
@@ -92,21 +112,23 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -116,45 +138,49 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -182,12 +208,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰
       - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 🇯🇵_JP_日本
 rule-providers:
   LocalAreaNetwork:
     type: http
