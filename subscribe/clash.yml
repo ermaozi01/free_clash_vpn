@@ -24,16 +24,41 @@ dns:
       - https://1.1.1.1/dns-query#🚀 节点选择
       - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-  - name: 🇺🇸_US_美国
-    type: vless
-    server: tg.juntham.cn
-    port: 443
-    uuid: da8aa4cc-4f76-4248-a289-41f25713b6e2
-    network: ws
-    tls: true
+  - name: 🇨🇳_CN_中国
+    type: vmess
+    server: 112.132.215.108
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸_US_美国_1
+  - name: 🇷🇺_RU_俄罗斯
+    type: vmess
+    server: renderer-stream-2-114.mirra.now
+    port: 443
+    uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: renderer-stream-2-114.mirra.now
+    network: ws
+    ws-opts:
+      path: /api/v1/gpu-stream/socket
+      headers:
+        Host: renderer-stream-2-114.mirra.now
+    udp: true
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vless
+    server: us22.sofast.live
+    port: 58011
+    uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国
     type: vmess
     server: guanwang.awsno.com
     port: 443
@@ -49,22 +74,7 @@ proxies:
       headers:
         Host: guanwang.awsno.com
     udp: true
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vless
-    server: spiderpanel-development-g5884.lucity.app
-    port: 443
-    uuid: cd0bd679-5760-4dd6-9340-576dd279228f
-    network: ws
-    servername: spiderpanel-development-g5884.lucity.app
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws/cd0bd679-5760-4dd6-9340-576dd279228f
-      headers:
-        Host: spiderpanel-development-g5884.lucity.app
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国
+  - name: 🇨🇳_CN_中国_1
     type: vmess
     server: 120.48.133.162
     port: 10086
@@ -75,45 +85,22 @@ proxies:
     skip-cert-verify: true
     network: ws
     udp: true
-  - name: 🇭🇰_HK_中国香港
-    type: vmess
-    server: v10.hdacd.com
-    port: 30807
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
-    type: vless
-    server: nl.alpheratzz.org
-    port: 8443
-    uuid: 1bda2ae7-b597-4704-95a8-29c0f76324ba
-    tls: true
-    flow: xtls-rprx-vision
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国_1
-    type: vmess
-    server: 112.132.215.108
-    port: 50002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇹🇼_TW_中国台湾
-    type: vmess
-    server: 24864168545164.d6f54hd1j.cc
+  - name: 🇯🇵_JP_日本
+    type: trojan
+    server: jp.tronsg.com
     port: 443
-    uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
-    alterId: 0
-    cipher: auto
-    tls: true
+    password: Trojan@82164024
+    sni: jp.tronsg.com
     skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 23.83.224.178
+    port: 54322
+    uuid: 2b424263-d888-494a-eb6a-79538055d1ad
     network: ws
+    tls: false
+    skip-cert-verify: true
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -121,25 +108,23 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -149,53 +134,49 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -223,14 +204,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇨🇳_CN_中国
-      - 🇭🇰_HK_中国香港
-      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
-      - 🇹🇼_TW_中国台湾
+      - 🇯🇵_JP_日本
+      - 🇺🇸_US_美国_1
 rule-providers:
   LocalAreaNetwork:
     type: http
