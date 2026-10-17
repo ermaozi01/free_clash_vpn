@@ -24,6 +24,14 @@ dns:
       - https://1.1.1.1/dns-query#🚀 节点选择
       - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
+  - name: 🇵🇱_PL_波兰
+    type: trojan
+    server: 78.17.171.62
+    port: 443
+    password: u93yPGuY2zgIsisJZKS2QzJzg
+    sni: FREETOPLAY-2.TETRIS-GAME.WORLD
+    skip-cert-verify: true
+    udp: true
   - name: 🇨🇳_CN_中国->🇫🇷_FR_法国
     type: vmess
     server: v35.hdacd.com
@@ -34,12 +42,22 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
     type: vmess
-    server: v29.hdacd.com
-    port: 30829
+    server: v6.hdacd.com
+    port: 30806
     uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
     alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵_JP_日本
+    type: vmess
+    server: oc.imfun.fun
+    port: 18112
+    uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+    alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
@@ -54,17 +72,17 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: 🇨🇳_CN_中国
     type: vmess
-    server: v36.hdacd.com
-    port: 30836
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
+    server: 112.132.215.108
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国
+  - name: 🇨🇳_CN_中国_1
     type: vmess
     server: 120.48.133.162
     port: 10086
@@ -91,39 +109,31 @@ proxies:
       headers:
         Host: guanwang.awsno.com
     udp: true
-  - name: 🇨🇳_CN_中国_1
-    type: vmess
-    server: 112.132.215.108
-    port: 50002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
   - name: ♻️ 自动选择
     type: url-test
     proxies:
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -133,49 +143,53 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -203,13 +217,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇵🇱_PL_波兰
       - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇯🇵_JP_日本
       - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇨🇳_CN_中国->🇬🇧_GB_英国
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
 rule-providers:
   LocalAreaNetwork:
     type: http
