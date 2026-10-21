@@ -24,153 +24,6 @@ dns:
       - https://1.1.1.1/dns-query#🚀 节点选择
       - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-  - name: 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-    type: vmess
-    server: sg-transit-3.nebulacloud.win
-    port: 30330
-    uuid: dfa9f875-3805-49d9-8636-46b6899be24e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg-transit-3.nebulacloud.win
-    network: ws
-    ws-opts:
-      path: /ca/getData
-      headers:
-        Host: sg-transit-3.nebulacloud.win
-    udp: true
-  - name: 🇸🇬_SG_新加坡->🇺🇸_US_美国
-    type: vmess
-    server: sg-transit-3.nebulacloud.win
-    port: 31414
-    uuid: dfa9f875-3805-49d9-8636-46b6899be24e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /getData/us
-    udp: true
-  - name: 🇸🇬_SG_新加坡
-    type: vless
-    server: 178.94.25.73
-    port: 14430
-    uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-    network: ws
-    servername: 178.94.25.73
-    tls: false
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 178.94.25.73
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇫🇷_FR_法国
-    type: vmess
-    server: v35.hdacd.com
-    port: 30835
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇩🇪_DE_德国
-    type: vmess
-    server: turknew.net-flowa.com
-    port: 80
-    uuid: cd96479e-9c39-4a7f-ba0c-806a83af19ca
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: http
-    udp: true
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: vless
-    server: redrocketnode-bidarbash.sbs
-    port: 443
-    uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
-    network: ws
-    servername: redrocketnode-bidarbash.sbs
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /zoodi
-      headers:
-        Host: redrocketnode-bidarbash.sbs
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vless
-    server: jp.sofast.live
-    port: 52683
-    uuid: 399b6b23-cc40-4831-a494-61948e2df133
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-    type: vmess
-    server: v29.hdacd.com
-    port: 30829
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国
-    type: vmess
-    server: 112.132.215.108
-    port: 50002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-    type: vmess
-    server: v4.hdacd.com
-    port: 30804
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
-    type: vless
-    server: vpn.cintaku.qzz.io
-    port: 443
-    uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-    network: ws
-    servername: vpn.cintaku.qzz.io
-    tls: true
-    client-fingerprint: unsafe
-    ws-opts:
-      path: /vlessws
-      headers:
-        Host: vpn.cintaku.qzz.io
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vless
-    server: alman.5f2vvtqh5syot.info
-    port: 443
-    uuid: ed6c724c-435f-4f83-a781-f57579af320b
-    network: ws
-    servername: alman.5f2vvtqh5syot.info
-    tls: true
-    client-fingerprint: unsafe
-    ws-opts:
-      path: /9d9fdbc18c834cffab4276811501fbae
-      headers:
-        Host: alman.5f2vvtqh5syot.info
-    skip-cert-verify: true
-    udp: true
   - name: 🇺🇸_US_美国
     type: vmess
     server: guanwang.awsno.com
@@ -187,41 +40,49 @@ proxies:
       headers:
         Host: guanwang.awsno.com
     udp: true
+  - name: 🇨🇳_CN_中国
+    type: vmess
+    server: 112.132.215.108
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇵🇱_PL_波兰
+    type: trojan
+    server: 78.17.171.106
+    port: 443
+    password: u93yPGuY2zgIsisJZKS2QzJzg
+    sni: 2.HI-L.IM
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪_DE_德国
+    type: vless
+    server: edge10.cyrionflare.com
+    port: 2052
+    uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+    tls: false
+    skip-cert-verify: true
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -231,73 +92,37 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -325,19 +150,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇸🇬_SG_新加坡->🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡->🇺🇸_US_美国
-      - 🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇵🇱_PL_波兰
+      - 🇩🇪_DE_德国
 rule-providers:
   LocalAreaNetwork:
     type: http
