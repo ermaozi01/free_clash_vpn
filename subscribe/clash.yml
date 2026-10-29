@@ -79,7 +79,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利 (6)
-    server: 202.50.253.99
+    server: 202.50.253.54
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -87,7 +87,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利 (7)
-    server: 202.50.253.81
+    server: 202.50.253.45
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -95,6 +95,22 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利 (8)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利 (9)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利 (10)
     server: 202.50.253.72
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -115,6 +131,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
   - name: ♻️ 自动选择
     type: url-test
     proxies:
@@ -126,6 +144,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -143,6 +163,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
   - name: 📲 电报信息
     type: select
     proxies:
@@ -156,6 +178,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -169,6 +193,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -182,6 +208,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -212,6 +240,8 @@ proxy-groups:
       - 🇮🇹_IT_意大利 (6)
       - 🇮🇹_IT_意大利 (7)
       - 🇮🇹_IT_意大利 (8)
+      - 🇮🇹_IT_意大利 (9)
+      - 🇮🇹_IT_意大利 (10)
 rule-providers:
   LocalAreaNetwork:
     type: http
