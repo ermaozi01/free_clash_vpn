@@ -38,6 +38,57 @@ dns:
     - https://1.1.1.1/dns-query
     - https://1.0.0.1/dns-query
 proxies:
+  - type: vless
+    name: 🇰🇷_KR_韩国_IPV4
+    server: 43.128.130.45
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    sni: xy1ej.stream-node-us.danfeng.qzz.io
+    skip-cert-verify: true
+    alpn:
+      - http/1.1
+    client-fingerprint: firefox
+    network: ws
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - type: vless
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+    server: 13.143.180.142
+    port: 443
+    uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
+    flow: xtls-rprx-vision
+    tls: true
+    servername: sw.lenvex.cc
+    sni: sw.lenvex.cc
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+  - type: hysteria
+    name: 🇺🇸_US_美国_IPV4
+    server: 137.175.82.43
+    port: 443
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "20"
+    down: "20"
+    auth-str: dongtaiwang.com
+  - type: anytls
+    name: 🇹🇼_TW_台湾_IPV4
+    server: user02.godvpn.lol
+    port: 62405
+    password: 4bbfa33a-449a-4a50-8dfc-6d0de880f7bc
+    tls: true
+    skip-cert-verify: true
   - type: hysteria2
     name: 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
     server: forshynewh.duckdns.org
@@ -87,6 +138,19 @@ proxies:
     client-fingerprint: chrome
     reality-opts:
       public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  - type: vless
+    name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+    server: 163.245.42.157
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    flow: xtls-rprx-vision
+    tls: true
+    servername: mother-earth.fyi
+    sni: mother-earth.fyi
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   - type: hysteria
     name: 🇫🇷_FR_法国_IPV4
     server: 62.210.28.175
@@ -102,7 +166,7 @@ proxies:
     down: "55"
     auth-str: dongtaiwang.com
   - type: anytls
-    name: 🇹🇼_TW_台湾_IPV4
+    name: 🇹🇼_TW_台湾_IPV4 (2)
     server: er8u54dh.df6h451rh.xin
     port: 443
     password: 0324fbc29561
@@ -111,7 +175,7 @@ proxies:
     sni: px.ads.linkedin.com
     skip-cert-verify: true
   - type: anytls
-    name: 🇹🇼_TW_台湾_IPV4 (2)
+    name: 🇹🇼_TW_台湾_IPV4 (3)
     server: 684616s4.df6h451rh.xin
     port: 443
     password: 0324fbc29561
@@ -119,6 +183,32 @@ proxies:
     servername: px.ads.linkedin.com
     sni: px.ads.linkedin.com
     skip-cert-verify: true
+  - type: vless
+    name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+    server: 9.247.23.209
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    flow: xtls-rprx-vision
+    tls: true
+    servername: mother-earth.fyi
+    sni: mother-earth.fyi
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  - type: vless
+    name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
+    server: edge.bookmai.com
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    flow: xtls-rprx-vision
+    tls: true
+    servername: mother-earth.fyi
+    sni: mother-earth.fyi
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   - type: hysteria
     name: 🇩🇪_DE_德国_IPV4
     server: 5.83.129.90
@@ -134,7 +224,7 @@ proxies:
     down: "55"
     auth-str: dongtaiwang.com
   - type: hysteria
-    name: 🇺🇸_US_美国_IPV4
+    name: 🇺🇸_US_美国_IPV4 (2)
     server: 137.175.82.44
     port: 443
     password: dongtaiwang.com
@@ -148,7 +238,7 @@ proxies:
     down: "55"
     auth-str: dongtaiwang.com
   - type: hysteria
-    name: 🇺🇸_US_美国_IPV4 (2)
+    name: 🇺🇸_US_美国_IPV4 (3)
     server: 198.200.57.142
     port: 22335
     password: github.com/Alvin9999-newpac/fanqiang
@@ -161,6 +251,15 @@ proxies:
     up: "11"
     down: "55"
     auth-str: github.com/Alvin9999-newpac/fanqiang
+  - type: anytls
+    name: 🇭🇰_HK_香港_IPV4
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    tls: true
+    servername: images.ctfassets.net
+    sni: images.ctfassets.net
+    skip-cert-verify: true
   - type: hysteria
     name: 🇫🇷_FR_法国_IPV4 (2)
     server: 163.172.117.163
@@ -176,7 +275,7 @@ proxies:
     down: "55"
     auth-str: dongtaiwang.com
   - type: hysteria2
-    name: 🇺🇸_US_美国_IPV4 (3)
+    name: 🇺🇸_US_美国_IPV4 (4)
     server: starlink-ft.251313.xyz
     port: 443
     password: https://xship.best
@@ -202,7 +301,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (3)
-    server: 202.50.253.63
+    server: 202.50.253.90
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -210,7 +309,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (4)
-    server: 202.50.253.18
+    server: 202.50.253.63
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -218,7 +317,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (5)
-    server: 202.50.253.54
+    server: 202.50.253.18
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -226,7 +325,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (6)
-    server: 202.50.253.45
+    server: 202.50.253.54
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -234,7 +333,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (7)
-    server: 202.50.253.99
+    server: 202.50.253.45
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -242,7 +341,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (8)
-    server: 202.50.253.81
+    server: 202.50.253.99
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -250,6 +349,14 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (9)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (10)
     server: 202.50.253.72
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -262,18 +369,26 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -283,21 +398,30 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: ♻️ 自动选择
     type: url-test
     proxies:
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -307,6 +431,7 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -316,18 +441,26 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -337,23 +470,32 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -363,23 +505,32 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -389,23 +540,32 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -415,6 +575,7 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -437,18 +598,26 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇰🇷_KR_韩国_IPV4
+      - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
       - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 10_IPV4
       - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
       - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇹🇼_TW_台湾_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (3)
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (4)
       - 🇩🇪_DE_德国_IPV4
-      - 🇺🇸_US_美国_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
+      - 🇭🇰_HK_香港_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -458,6 +627,7 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
 rule-providers:
   LocalAreaNetwork:
     type: http
