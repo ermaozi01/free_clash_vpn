@@ -38,21 +38,46 @@ dns:
     - https://1.1.1.1/dns-query
     - https://1.0.0.1/dns-query
 proxies:
-  - type: vless
-    name: 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
-    server: 8.35.211.242
-    port: 443
-    uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+  - type: hysteria2
+    name: 🇩🇪_DE_德国_IPV4
+    server: 88.99.213.222
+    port: 14444
+    password: mhsl
     tls: true
-    servername: vpn.cintaku.qzz.io
-    sni: vpn.cintaku.qzz.io
-    skip-cert-verify: false
-    client-fingerprint: unsafe
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+  - type: anytls
+    name: 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+    server: sdf65h46wr.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    tls: true
+    servername: images.ctfassets.net
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+  - type: anytls
+    name: 🇹🇼_TW_台湾_IPV4
+    server: user02.godvpn.lol
+    port: 62405
+    password: 4bbfa33a-449a-4a50-8dfc-6d0de880f7bc
+    tls: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国 CloudFlare节点_IPV4
+    server: 104.17.77.77
+    port: 8443
+    uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: v2ray1.dozapp.xyz
+    sni: v2ray1.dozapp.xyz
     network: ws
     ws-opts:
-      path: /vlessws
+      path: /lMnsZUN4/
       headers:
-        Host: vpn.cintaku.qzz.io
+        Host: v2ray1.dozapp.xyz
   - type: hysteria
     name: 🇺🇸_US_美国_IPV4
     server: 137.175.82.43
@@ -81,17 +106,8 @@ proxies:
     up: "11"
     down: "55"
     auth-str: dongtaiwang.com
-  - type: anytls
-    name: 🇹🇼_TW_台湾_IPV4
-    server: er8u54dh.df6h451rh.xin
-    port: 443
-    password: 0324fbc29561
-    tls: true
-    servername: px.ads.linkedin.com
-    sni: px.ads.linkedin.com
-    skip-cert-verify: true
   - type: hysteria
-    name: 🇩🇪_DE_德国_IPV4
+    name: 🇩🇪_DE_德国_IPV4 (2)
     server: 5.83.129.90
     port: 54177
     password: dongtaiwang.com
@@ -132,15 +148,6 @@ proxies:
     up: "11"
     down: "55"
     auth-str: github.com/Alvin9999-newpac/fanqiang
-  - type: anytls
-    name: 🇭🇰_HK_香港_IPV4
-    server: 56481.df6h451rh.xin
-    port: 443
-    password: 0324fbc29561
-    tls: true
-    servername: images.ctfassets.net
-    sni: images.ctfassets.net
-    skip-cert-verify: true
   - type: hysteria
     name: 🇫🇷_FR_法国_IPV4 (2)
     server: 163.172.117.163
@@ -222,7 +229,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (8)
-    server: 202.50.253.81
+    server: 202.50.253.99
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -230,6 +237,14 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (9)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (10)
     server: 202.50.253.72
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -242,14 +257,15 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -261,17 +277,19 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -283,6 +301,7 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -292,14 +311,15 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -311,19 +331,21 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -335,19 +357,21 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -359,19 +383,21 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -383,6 +409,7 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -405,14 +432,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇲🇾[www.v2nodes.com] vless-MY-1..._IPV4
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇹🇼_TW_台湾_IPV4
+      - 美国 CloudFlare节点_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (3)
-      - 🇭🇰_HK_香港_IPV4
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇺🇸_US_美国_IPV4 (4)
       - 🇮🇹_IT_意大利_IPV4
@@ -424,6 +452,7 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4 (7)
       - 🇮🇹_IT_意大利_IPV4 (8)
       - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
 rule-providers:
   LocalAreaNetwork:
     type: http
