@@ -1,0 +1,657 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - localhost
+    - +.localhost
+    - +.lan
+    - +.local
+    - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+      - https://223.5.5.5/dns-query#DIRECT
+      - https://doh.pub/dns-query#DIRECT
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+proxies:
+  - type: ss
+    name: 🇺🇸_US_美国_IPV4
+    server: twichcom.plus-hit.ru
+    port: 1080
+    password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
+    cipher: chacha20-ietf-poly1305
+    tls: false
+    skip-cert-verify: false
+  - type: vmess
+    name: 🇨🇳_CN_中国_IPV4
+    server: 120.48.133.162
+    port: 10086
+    uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
+    cipher: auto
+    alterId: 0
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+  - type: trojan
+    name: 🇯🇵_JP_日本_IPV4
+    server: 160.21.74.183
+    port: 8443
+    password: ZLNrfFIw6IXWvhFvGEWi4EcsWJ76ZiDh
+    tls: true
+    servername: 160.21.74.183
+    sni: 160.21.74.183
+    skip-cert-verify: true
+  - type: vless
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+    server: 79.182.39.110
+    port: 443
+    uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+    tls: true
+    servername: ac3f32g.de18.h1clayd.click
+    sni: ac3f32g.de18.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: cO2bNRZvYDit8UqQk_zc6BaSBA7LiLMSmMHTwjU531Q
+      short-id: 051e90ed3d657158
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 01ad85319ae3
+  - type: vmess
+    name: "🇺🇸 美国 | USA #4-47593152_IPV4"
+    server: 104.21.7.133
+    port: 443
+    uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: vmess.lbw666.dpdns.org
+    sni: vmess.lbw666.dpdns.org
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: vmess.lbw666.dpdns.org
+  - type: ss
+    name: 🇷🇺_RU_俄罗斯_IPV4
+    server: 46.17.47.58
+    port: 18443
+    password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: vmess
+    name: 🇺🇸_US_美国_IPV4 (2)
+    server: 23.94.83.37
+    port: 52080
+    uuid: 355c1760-9bde-4b77-916b-5191e7f704a3
+    cipher: auto
+    alterId: 0
+    tls: false
+    servername: down-cdn.dingtalk.com
+    sni: down-cdn.dingtalk.com
+    network: http
+    http-opts:
+      path:
+        - /QQqun-737805443
+      headers:
+        Host:
+          - down-cdn.dingtalk.com
+  - type: ss
+    name: 🇺🇸_US_美国_IPV4 (3)
+    server: 88.216.254.18
+    port: 1080
+    password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
+    cipher: chacha20-ietf-poly1305
+    tls: false
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇩🇪_DE_德国_IPV4
+    server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+    port: 443
+    password: 6cddea99-9b18-4d42-8638-131bd9f5374f
+    tls: true
+    servername: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+    sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+    skip-cert-verify: true
+    client-fingerprint: chrome
+  - type: anytls
+    name: 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+    server: sdf65h46wr.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    tls: true
+    servername: images.ctfassets.net
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+  - type: hysteria2
+    name: 🇫🇷_FR_法国_IPV6
+    server: 2001:bc8:32d7:17b::3
+    port: 22000
+    password: dongtaiwang.com
+    tls: true
+    servername: www.microsoft.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+  - type: anytls
+    name: 🇹🇼_TW_台湾_IPV4
+    server: user02.godvpn.lol
+    port: 62405
+    password: 4bbfa33a-449a-4a50-8dfc-6d0de880f7bc
+    tls: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 🇺🇸_US_美国_IPV4 (4)
+    server: 172.66.0.1
+    port: 443
+    uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: vmess.lbw666.dpdns.org
+    sni: vmess.lbw666.dpdns.org
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: vmess.lbw666.dpdns.org
+  - type: hysteria
+    name: 🇫🇷_FR_法国_IPV4
+    server: 62.210.28.175
+    port: 24667
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria
+    name: 🇩🇪_DE_德国_IPV4 (2)
+    server: 5.83.129.90
+    port: 54177
+    password: dongtaiwang.com
+    tls: true
+    servername: apple.com
+    sni: apple.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria
+    name: 🇫🇷_FR_法国_IPV4 (2)
+    server: 163.172.117.163
+    port: 36699
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria2
+    name: 🇺🇸_US_美国_IPV4 (5)
+    server: starlink-ft.251313.xyz
+    port: 443
+    password: https://xship.best
+    tls: true
+    servername: xship.top
+    sni: xship.top
+    skip-cert-verify: true
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (2)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (3)
+    server: 202.50.253.90
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (4)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (5)
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (6)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (7)
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (8)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (9)
+    server: 202.50.253.81
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (10)
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇺🇸_US_美国_IPV4
+      - 🇨🇳_CN_中国_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
+      - "🇺🇸 美国 | USA #4-47593152_IPV4"
+      - 🇷🇺_RU_俄罗斯_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇩🇪_DE_德国_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇫🇷_FR_法国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
