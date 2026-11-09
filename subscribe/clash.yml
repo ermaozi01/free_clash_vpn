@@ -38,108 +38,34 @@ dns:
     - https://1.1.1.1/dns-query
     - https://1.0.0.1/dns-query
 proxies:
-  - type: ss
+  - type: hysteria
     name: 🇺🇸_US_美国_IPV4
-    server: twichcom.plus-hit.ru
-    port: 1080
-    password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
-    cipher: chacha20-ietf-poly1305
-    tls: false
-    skip-cert-verify: false
-  - type: vmess
-    name: 🇨🇳_CN_中国_IPV4
-    server: 120.48.133.162
-    port: 10086
-    uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
-    cipher: auto
-    alterId: 0
-    tls: false
-    network: ws
-    ws-opts:
-      path: /
-  - type: trojan
-    name: 🇯🇵_JP_日本_IPV4
-    server: 160.21.74.183
-    port: 8443
-    password: ZLNrfFIw6IXWvhFvGEWi4EcsWJ76ZiDh
+    server: 137.175.82.43
+    port: 20022
+    password: dongtaiwang.com
     tls: true
-    servername: 160.21.74.183
-    sni: 160.21.74.183
+    servername: bing.com
+    sni: bing.com
     skip-cert-verify: true
-  - type: vless
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-    server: 79.182.39.110
-    port: 443
-    uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
-    tls: true
-    servername: ac3f32g.de18.h1clayd.click
-    sni: ac3f32g.de18.h1clayd.click
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: cO2bNRZvYDit8UqQk_zc6BaSBA7LiLMSmMHTwjU531Q
-      short-id: 051e90ed3d657158
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 01ad85319ae3
-  - type: vmess
-    name: "🇺🇸 美国 | USA #4-47593152_IPV4"
-    server: 104.21.7.133
-    port: 443
-    uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-    cipher: auto
-    alterId: 0
-    tls: true
-    servername: vmess.lbw666.dpdns.org
-    sni: vmess.lbw666.dpdns.org
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: vmess.lbw666.dpdns.org
-  - type: ss
-    name: 🇷🇺_RU_俄罗斯_IPV4
-    server: 46.17.47.58
-    port: 18443
-    password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-    cipher: aes-256-gcm
-    tls: false
-    skip-cert-verify: false
-  - type: vmess
+    alpn:
+      - h3
+    up: "20"
+    down: "20"
+    auth-str: dongtaiwang.com
+  - type: hysteria
     name: 🇺🇸_US_美国_IPV4 (2)
-    server: 23.94.83.37
-    port: 52080
-    uuid: 355c1760-9bde-4b77-916b-5191e7f704a3
-    cipher: auto
-    alterId: 0
-    tls: false
-    servername: down-cdn.dingtalk.com
-    sni: down-cdn.dingtalk.com
-    network: http
-    http-opts:
-      path:
-        - /QQqun-737805443
-      headers:
-        Host:
-          - down-cdn.dingtalk.com
-  - type: ss
-    name: 🇺🇸_US_美国_IPV4 (3)
-    server: 88.216.254.18
-    port: 1080
-    password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
-    cipher: chacha20-ietf-poly1305
-    tls: false
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇩🇪_DE_德国_IPV4
-    server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-    port: 443
-    password: 6cddea99-9b18-4d42-8638-131bd9f5374f
+    server: 137.175.82.44
+    port: 20022
+    password: dongtaiwang.com
     tls: true
-    servername: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-    sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+    servername: bing.com
+    sni: bing.com
     skip-cert-verify: true
-    client-fingerprint: chrome
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
   - type: anytls
     name: 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
     server: sdf65h46wr.df6h451rh.xin
@@ -149,37 +75,6 @@ proxies:
     servername: images.ctfassets.net
     sni: images.ctfassets.net
     skip-cert-verify: true
-  - type: hysteria2
-    name: 🇫🇷_FR_法国_IPV6
-    server: 2001:bc8:32d7:17b::3
-    port: 22000
-    password: dongtaiwang.com
-    tls: true
-    servername: www.microsoft.com
-    sni: www.microsoft.com
-    skip-cert-verify: true
-  - type: anytls
-    name: 🇹🇼_TW_台湾_IPV4
-    server: user02.godvpn.lol
-    port: 62405
-    password: 4bbfa33a-449a-4a50-8dfc-6d0de880f7bc
-    tls: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 🇺🇸_US_美国_IPV4 (4)
-    server: 172.66.0.1
-    port: 443
-    uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-    cipher: auto
-    alterId: 0
-    tls: true
-    servername: vmess.lbw666.dpdns.org
-    sni: vmess.lbw666.dpdns.org
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: vmess.lbw666.dpdns.org
   - type: hysteria
     name: 🇫🇷_FR_法国_IPV4
     server: 62.210.28.175
@@ -194,43 +89,6 @@ proxies:
     up: "11"
     down: "55"
     auth-str: dongtaiwang.com
-  - type: hysteria
-    name: 🇩🇪_DE_德国_IPV4 (2)
-    server: 5.83.129.90
-    port: 54177
-    password: dongtaiwang.com
-    tls: true
-    servername: apple.com
-    sni: apple.com
-    skip-cert-verify: true
-    alpn:
-      - h3
-    up: "11"
-    down: "55"
-    auth-str: dongtaiwang.com
-  - type: hysteria
-    name: 🇫🇷_FR_法国_IPV4 (2)
-    server: 163.172.117.163
-    port: 36699
-    password: dongtaiwang.com
-    tls: true
-    servername: bing.com
-    sni: bing.com
-    skip-cert-verify: true
-    alpn:
-      - h3
-    up: "11"
-    down: "55"
-    auth-str: dongtaiwang.com
-  - type: hysteria2
-    name: 🇺🇸_US_美国_IPV4 (5)
-    server: starlink-ft.251313.xyz
-    port: 443
-    password: https://xship.best
-    tls: true
-    servername: xship.top
-    sni: xship.top
-    skip-cert-verify: true
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4
     server: 202.50.253.27
@@ -318,22 +176,9 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -348,22 +193,9 @@ proxy-groups:
     type: url-test
     proxies:
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -384,22 +216,9 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -416,22 +235,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -448,22 +254,9 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -480,22 +273,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
@@ -529,22 +309,9 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇺🇸_US_美国_IPV4
-      - 🇨🇳_CN_中国_IPV4
-      - 🇯🇵_JP_日本_IPV4
-      - 🇳🇱_NL_荷兰->🇩🇪_DE_德国_IPV4
-      - "🇺🇸 美国 | USA #4-47593152_IPV4"
-      - 🇷🇺_RU_俄罗斯_IPV4
       - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
-      - 🇩🇪_DE_德国_IPV4
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
-      - 🇫🇷_FR_法国_IPV6
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (4)
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇫🇷_FR_法国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (5)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
