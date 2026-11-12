@@ -40,6 +40,89 @@ dns:
 proxies:
   - type: vless
     name: 🇺🇸_US_美国_IPV4
+    server: 184.195.175.29
+    port: 443
+    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+    tls: false
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: http
+    http-opts:
+      headers:
+        Host:
+          - play.googleapis.com
+  - type: vmess
+    name: 🇺🇸_US_美国_IPV4 (2)
+    server: 104.18.42.163
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: vmess
+    name: 🏁RELAY-104.17.77.77-1140_IPV4
+    server: 104.17.77.77
+    port: 8443
+    uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: v2ray1.dozapp.xyz
+    sni: v2ray1.dozapp.xyz
+    network: ws
+    ws-opts:
+      path: /lMnsZUN4/
+      headers:
+        Host: v2ray1.dozapp.xyz
+  - type: trojan
+    name: 🇺🇸_US_美国_IPV4 (3)
+    server: 23.106.44.14
+    port: 443
+    password: 600421cf-11d7-429f-a65b-c30397f1bc03
+    tls: true
+    servername: sj6.freeguard.org
+    sni: sj6.freeguard.org
+    skip-cert-verify: true
+  - type: vmess
+    name: "@meliproxy (3)_IPV4"
+    server: 104.17.147.222
+    port: 80
+    uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+    cipher: auto
+    alterId: 0
+    tls: false
+    servername: vmess.lbw666.dpdns.org
+    sni: vmess.lbw666.dpdns.org
+    network: ws
+    ws-opts:
+      path: /ws?ed=2048
+      headers:
+        Host: vmess.lbw666.dpdns.org
+  - type: vless
+    name: 🇩🇪_DE_德国_IPV4
+    server: 191.44.112.170
+    port: 443
+    uuid: 46d221fa-e9b4-748c-4eae-019a88e42991
+    tls: true
+    servername: orbylume.my.to
+    sni: orbylume.my.to
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    network: ws
+    ws-opts:
+      path: /tvpn-tor/is
+      headers:
+        Host: orbylume.my.to
+  - type: vless
+    name: 🇺🇸_US_美国_IPV4 (4)
     server: 3.169.9.125
     port: 443
     uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
@@ -80,7 +163,7 @@ proxies:
       headers:
         Host: guanwang.awsno.com
   - type: trojan
-    name: 🇩🇪_DE_德国_IPV4
+    name: 🇩🇪_DE_德国_IPV4 (2)
     server: 191.44.112.170.sslip.io
     port: 443
     password: 46d221fa-e9b4-748c-4eae-019a88e42991
@@ -110,7 +193,7 @@ proxies:
       headers:
         Host: guanwang.awsno.com
   - type: hysteria
-    name: 🇺🇸_US_美国_IPV4 (2)
+    name: 🇺🇸_US_美国_IPV4 (5)
     server: 137.175.82.43
     port: 20022
     password: dongtaiwang.com
@@ -124,7 +207,7 @@ proxies:
     down: "20"
     auth-str: dongtaiwang.com
   - type: hysteria
-    name: 🇺🇸_US_美国_IPV4 (3)
+    name: 🇺🇸_US_美国_IPV4 (6)
     server: 137.175.82.44
     port: 20022
     password: dongtaiwang.com
@@ -161,7 +244,7 @@ proxies:
     down: "55"
     auth-str: dongtaiwang.com
   - type: hysteria
-    name: 🇩🇪_DE_德国_IPV4 (2)
+    name: 🇩🇪_DE_德国_IPV4 (3)
     server: 5.83.129.90
     port: 54177
     password: dongtaiwang.com
@@ -175,7 +258,7 @@ proxies:
     down: "55"
     auth-str: dongtaiwang.com
   - type: hysteria
-    name: 🇺🇸_US_美国_IPV4 (4)
+    name: 🇺🇸_US_美国_IPV4 (7)
     server: 198.200.57.142
     port: 22335
     password: github.com/Alvin9999-newpac/fanqiang
@@ -289,16 +372,22 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
@@ -314,16 +403,22 @@ proxy-groups:
     type: url-test
     proxies:
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
@@ -345,16 +440,22 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
@@ -372,16 +473,22 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
@@ -399,16 +506,22 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
@@ -426,16 +539,22 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
@@ -470,16 +589,22 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇺🇸_US_美国_IPV4
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🏁RELAY-104.17.77.77-1140_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - "@meliproxy (3)_IPV4"
+      - 🇩🇪_DE_德国_IPV4
+      - 🇺🇸_US_美国_IPV4 (4)
       - 🇨🇳_CN_中国_IPV4
       - "@DeltaKroneckerGithub_3021_IPV4"
-      - 🇩🇪_DE_德国_IPV4
+      - 🇩🇪_DE_德国_IPV4 (2)
       - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
       - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国_IPV4 (2)
-      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇩🇪_DE_德国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (7)
       - 🇫🇷_FR_法国_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
