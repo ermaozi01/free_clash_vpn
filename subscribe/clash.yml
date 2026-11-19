@@ -52,6 +52,19 @@ proxies:
     reality-opts:
       public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
       short-id: fa514b83
+  - type: vless
+    name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+    server: 163.245.42.87
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    flow: xtls-rprx-vision
+    tls: true
+    servername: mother-earth.fyi
+    sni: mother-earth.fyi
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   - type: hysteria
     name: 🇺🇸_US_美国_IPV4
     server: 38.6.222.130
@@ -517,21 +530,6 @@ proxies:
       path: /hls/cctv5phd.m3u8
       headers:
         Host: guanwang.awsno.com
-  - type: vmess
-    name: "@DeltaKroneckerGithub_3021_IPV4"
-    server: 172.64.145.93
-    port: 443
-    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-    cipher: auto
-    alterId: 0
-    tls: true
-    servername: guanwang.awsno.com
-    sni: guanwang.awsno.com
-    network: ws
-    ws-opts:
-      path: /hls/cctv5phd.m3u8
-      headers:
-        Host: guanwang.awsno.com
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -539,6 +537,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -567,11 +566,11 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -600,7 +599,6 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -611,6 +609,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -639,13 +638,13 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -674,13 +673,13 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -709,13 +708,13 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -744,7 +743,6 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -768,6 +766,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇹🇼_TW_台湾_IPV4
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国->🇩🇪_DE_德国_IPV4
@@ -796,7 +795,6 @@ proxy-groups:
       - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
       - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
       - 🇺🇸_US_美国_IPV4 (13)
-      - "@DeltaKroneckerGithub_3021_IPV4"
 rule-providers:
   LocalAreaNetwork:
     type: http
