@@ -95,21 +95,6 @@ proxies:
     skip-cert-verify: true
     alpn:
       - h3
-  - type: vless
-    name: "@DeltaKroneckerGithub_741_IPV4"
-    server: 172.67.139.189
-    port: 443
-    uuid: 364D2D52-E61E-4E52-80EC-2BC6BDF15349
-    tls: true
-    servername: fr-free.fastestrelay.com
-    sni: fr-free.fastestrelay.com
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /700gvl
-      headers:
-        Host: fr-free.fastestrelay.com
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -121,7 +106,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
   - name: ♻️ 自动选择
     type: url-test
     proxies:
@@ -130,7 +114,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -145,7 +128,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -156,7 +138,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -167,7 +148,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -178,7 +158,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -206,7 +185,6 @@ proxy-groups:
       - 🇫🇷_FR_法国_IPV6
       - 🇫🇷_FR_法国_IPV6 (2)
       - 🇫🇷_FR_法国_IPV6 (3)
-      - "@DeltaKroneckerGithub_741_IPV4"
 rule-providers:
   LocalAreaNetwork:
     type: http
