@@ -52,126 +52,8 @@ proxies:
     up: "20"
     down: "20"
     auth-str: dongtaiwang.com
-  - type: anytls
-    name: 🇹🇼_TW_台湾_IPV4
-    server: mfjh645drfj1dr6j5.df6h451rh.xin
-    port: 443
-    password: 0324fbc29561
-    tls: true
-    servername: px.ads.linkedin.com
-    sni: px.ads.linkedin.com
-    skip-cert-verify: true
-    client-fingerprint: chrome
-  - type: vless
-    name: 🇺🇸_US_美国_IPV4 (2)
-    server: 172.236.231.45
-    port: 443
-    uuid: 4c4f7955-3b05-4795-b3b7-6c83b7f82b0f
-    tls: true
-    servername: itunes.apple.com
-    sni: itunes.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: M6kLOIYA9IagUu0eiplnPZFObYVzTc4GfPyEqKQnZWQ
-      short-id: 8353867a
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: itunes.apple.com
-  - type: vless
-    name: 🇯🇵_JP_日本_IPV4
-    server: 139.162.91.224
-    port: 443
-    uuid: ff3038b1-a2f5-428f-89cd-5d5e4efba8e7
-    tls: true
-    servername: itunes.apple.com
-    sni: itunes.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: wmbc3kcjbG9-A9Fi7zaHuRVPH7A7UQkKNNvqyqJtMEk
-      short-id: e5b03494
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: itunes.apple.com
-  - type: vless
-    name: 🇯🇵_JP_日本_IPV4 (2)
-    server: 139.162.91.247
-    port: 443
-    uuid: 8cfdacf8-e781-42f0-9872-8d1d22469de5
-    tls: true
-    servername: itunes.apple.com
-    sni: itunes.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: _gFFckW3h8hFfllawgec9U2PDBeLJeCK_Jgk1S5tgC8
-      short-id: 536d7739
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: itunes.apple.com
-  - type: vless
-    name: 🇯🇵_JP_日本_IPV4 (3)
-    server: 139.162.101.74
-    port: 443
-    uuid: 1e709d98-d4c3-45c1-bdcc-4268cf83eff8
-    tls: true
-    servername: itunes.apple.com
-    sni: itunes.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: jd8UNLpim43LVV-iEzIXlUgTVuvi9Pf7E0kgQb3o0CI
-      short-id: 7e1e09f4
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: itunes.apple.com
-  - type: vless
-    name: 🇺🇸_US_美国_IPV4 (3)
-    server: 172.235.51.71
-    port: 443
-    uuid: 3c17ead6-201a-4fba-8246-6327b911a1be
-    tls: true
-    servername: itunes.apple.com
-    sni: itunes.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: rzeXNEmuocvPVMnmettRsJbHQGjQGaZoH7jNw_3GUD8
-      short-id: 4bf84b30
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: itunes.apple.com
   - type: vless
     name: 🇸🇬_SG_新加坡_IPV4
-    server: 172.104.186.185
-    port: 443
-    uuid: 87ff88cc-5c1f-4f46-86b8-c43f55b71dd2
-    tls: true
-    servername: itunes.apple.com
-    sni: itunes.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: xGPjO2ukRsGiMm-vAzcLcFYu5ivYe2paztFS64q3Bkw
-      short-id: b29516da
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: itunes.apple.com
-  - type: vless
-    name: 🇸🇬_SG_新加坡_IPV4 (2)
     server: 149.28.152.20
     port: 443
     uuid: e17ca473-bd02-4fe6-873f-5866d729b0a3
@@ -189,7 +71,7 @@ proxies:
       headers:
         Host: itunes.apple.com
   - type: vless
-    name: 🇸🇬_SG_新加坡_IPV4 (3)
+    name: 🇸🇬_SG_新加坡_IPV4 (2)
     server: 139.180.215.25
     port: 443
     uuid: bbc20d3e-0391-48f1-ad72-90a6802f728e
@@ -206,42 +88,336 @@ proxies:
       path: /ws
       headers:
         Host: itunes.apple.com
-  - type: vless
-    name: 🇯🇵_JP_日本_IPV4 (4)
-    server: 172.238.18.103
+  - type: hysteria2
+    name: 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+    server: uk-tube-01.stre4m.net
+    port: 13337
+    password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+    tls: true
+    servername: mother-earth.fyi
+    sni: mother-earth.fyi
+    skip-cert-verify: true
+  - type: hysteria2
+    name: 🇫🇷_FR_法国_IPV6
+    server: 2001:bc8:32d7:17b::10
+    port: 22000
+    password: dongtaiwang.com
+    tls: true
+    servername: www.microsoft.com
+    sni: www.microsoft.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+  - type: anytls
+    name: 🇹🇼_TW_台湾_IPV4
+    server: a54ge.df6h451rh.xin
     port: 443
-    uuid: f4a4498a-c02f-4862-93ae-8f495c9cd2c0
+    password: 0324fbc29561
+    tls: true
+    servername: docs.microsoft.com
+    sni: docs.microsoft.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+  - type: anytls
+    name: 🇭🇰_HK_香港_IPV4
+    server: 5641sdds.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    tls: true
+    servername: images.ctfassets.net
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    client-fingerprint: chrome
+  - type: anytls
+    name: 🇹🇼_TW_台湾_IPV4 (2)
+    server: rtifgjdr.df6h451rh.xin
+    port: 443
+    password: 2902c46c8493
+    tls: true
+    servername: docs.microsoft.com
+    sni: docs.microsoft.com
+    skip-cert-verify: true
+  - type: anytls
+    name: 🇭🇰_HK_香港_IPV4 (2)
+    server: ibsdsf.df6h451rh.xin
+    port: 443
+    password: 2902c46c8493
+    tls: true
+    servername: docs.microsoft.com
+    sni: docs.microsoft.com
+    skip-cert-verify: true
+  - type: hysteria
+    name: 🇺🇸_US_美国_IPV4 (2)
+    server: 137.175.82.41
+    port: 20022
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria
+    name: 🇺🇸_US_美国_IPV4 (3)
+    server: 38.6.222.132
+    port: 11008
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria
+    name: 🇺🇸_US_美国_IPV4 (4)
+    server: 38.6.222.131
+    port: 11008
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: vmess
+    name: 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+    server: www.shopify.com
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: vless
+    name: 🇯🇵_JP_日本_IPV4
+    server: 149.28.29.156
+    port: 443
+    uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
     tls: true
     servername: itunes.apple.com
     sni: itunes.apple.com
     skip-cert-verify: false
     client-fingerprint: chrome
     reality-opts:
-      public-key: BDt3yJpYIovC6b1iJF2h8qH4LfQAoSC0u3iVa0cFeSM
-      short-id: 6ff775ae
+      public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+      short-id: e535df57
     network: ws
     ws-opts:
       path: /ws
       headers:
         Host: itunes.apple.com
   - type: vless
-    name: 🇯🇵_JP_日本_IPV4 (5)
-    server: 172.237.14.142
+    name: 🇯🇵_JP_日本_IPV4 (2)
+    server: 198.13.53.39
     port: 443
-    uuid: 323aa578-bddb-47ed-bdb6-5650ade5825c
+    uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
     tls: true
     servername: itunes.apple.com
     sni: itunes.apple.com
     skip-cert-verify: false
     client-fingerprint: chrome
     reality-opts:
-      public-key: UPeN2wAl3WQKsj-IchFF-81OnbhP1FQJ0EtcBFQn0Ak
-      short-id: 6093f81a
+      public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+      short-id: 7a7cc838
     network: ws
     ws-opts:
       path: /ws
       headers:
         Host: itunes.apple.com
+  - type: hysteria
+    name: 🇫🇷_FR_法国_IPV4
+    server: 62.210.124.132
+    port: 24667
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: vless
+    name: 🇸🇬_SG_新加坡_IPV4 (3)
+    server: 139.180.221.53
+    port: 443
+    uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
+    tls: true
+    servername: itunes.apple.com
+    sni: itunes.apple.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
+      short-id: 2f6f6f87
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: itunes.apple.com
+  - type: vless
+    name: 🇺🇸_US_美国_IPV4 (5)
+    server: 172.236.241.130
+    port: 443
+    uuid: 21117a67-21c2-4e2a-ba8f-bc49e23b0ae8
+    tls: true
+    servername: itunes.apple.com
+    sni: itunes.apple.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ibi0jOH5SfYhh7ycxdBrqq5oN4ajN3-dNiHKWC2VYWs
+      short-id: 51ecfe9e
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: itunes.apple.com
+  - type: hysteria2
+    name: 🇺🇸_US_美国_IPV4 (6)
+    server: starlink-ft.251313.xyz
+    port: 443
+    password: https://xship.2fa.cat
+    tls: true
+    servername: xship.top
+    sni: xship.top
+    skip-cert-verify: true
+  - type: vmess
+    name: 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+    server: 188.114.99.137
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: vmess
+    name: 🇺🇸_US_美国_IPV4 (7)
+    server: 104.18.42.163
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: vmess
+    name: "@DeltaKroneckerGithub_3021_IPV4"
+    server: 172.64.145.93
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: vmess
+    name: 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+    server: 172.67.190.164
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: anytls
+    name: 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+    server: sdf65h46wr.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    tls: true
+    servername: images.ctfassets.net
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (2)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (3)
+    server: 202.50.253.90
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (4)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (5)
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (6)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -249,32 +425,68 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -285,68 +497,140 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -370,17 +654,35 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇺🇸_US_美国_IPV4
-      - 🇹🇼_TW_台湾_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4
-      - 🇯🇵_JP_日本_IPV4 (2)
-      - 🇯🇵_JP_日本_IPV4 (3)
-      - 🇺🇸_US_美国_IPV4 (3)
       - 🇸🇬_SG_新加坡_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (2)
+      - 🇦🇪_AE_阿拉伯联合酋长国->🇩🇪_DE_德国_IPV4
+      - 🇫🇷_FR_法国_IPV6
+      - 🇹🇼_TW_台湾_IPV4
+      - 🇭🇰_HK_香港_IPV4
+      - 🇹🇼_TW_台湾_IPV4 (2)
+      - 🇭🇰_HK_香港_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+      - 🇯🇵_JP_日本_IPV4
+      - 🇯🇵_JP_日本_IPV4 (2)
+      - 🇫🇷_FR_法国_IPV4
       - 🇸🇬_SG_新加坡_IPV4 (3)
-      - 🇯🇵_JP_日本_IPV4 (4)
-      - 🇯🇵_JP_日本_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸_US_美国_IPV4 (6)
+      - 🇺🇸 机场推荐:dafei.de 美国 89_IPV4
+      - 🇺🇸_US_美国_IPV4 (7)
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+      - 🇹🇼_TW_台湾->🇺🇸_US_美国_IPV4
+      - 🇮🇹_IT_意大利_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (2)
+      - 🇮🇹_IT_意大利_IPV4 (3)
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
 rule-providers:
   LocalAreaNetwork:
     type: http
